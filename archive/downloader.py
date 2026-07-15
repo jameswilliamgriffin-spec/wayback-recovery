@@ -3,7 +3,7 @@
 import requests
 
 from archive.cache import CacheManager
-from archive.network import request_with_retry
+from archive.services.network import request_with_retry
 
 TIMEOUT = 30
 

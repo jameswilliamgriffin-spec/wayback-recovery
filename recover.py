@@ -25,7 +25,7 @@ def main() -> None:
         return
 
     if args.timeline:
-        from archive.cdx import CDXClient
+        from archive.services.cdx import CDXClient
         from archive.timeline import build_timeline
 
         records = CDXClient().get_records(args.domain, collapse=True)
@@ -51,7 +51,7 @@ def main() -> None:
         return
 
     if args.versions:
-        from archive.cdx import CDXClient
+        from archive.services.cdx import CDXClient
         from archive.version_detector import detect_versions
 
         records = CDXClient().get_records(args.domain, collapse=True)
